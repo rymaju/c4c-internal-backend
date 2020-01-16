@@ -9,13 +9,6 @@
 
   <artifactId>persist</artifactId>
 
-  <properties>
-    <database.driver>org.postgresql.Driver</database.driver>
-    <database.url>jdbc:postgresql://ec2-50-16-225-96.compute-1.amazonaws.com:5432/d892h1vcvqvimo</database.url>
-    <database.username>txribxbbfmugpa</database.username>
-    <database.password>a6a7b6848b205806cb4e094064e4dd6f7cb7639d8f8974def972eda0ffbc658c</database.password>
-  </properties>
-
   <build>
     <plugins>
       <!-- Read database properties file -->
@@ -77,9 +70,14 @@
 
                      - semantic: sorts versions, e.g. v-3.10.0 is after v-3.9.0 (default)
                      - alphanumeric: sorts strings, e.g. v-3.10.0 is before v-3.9.0
-      
+                     - flyway: sorts files the same way as flyway does
+                     - none: doesn't sort directory contents after fetching them from the directory -->
+                <property>
+                  <key>sort</key>
+                  <value>none</value>
+                </property>
 
-                The default schema for unqualified objects:
+                <!-- The default schema for unqualified objects:
 
                      - public: all unqualified objects are located in the PUBLIC (upper case) schema
                      - none: all unqualified objects are located in the default schema (default) -->
@@ -104,7 +102,7 @@
       </plugin>
 
       <!-- Used for versioning our database -->
-
+     
     </plugins>
   </build>
 
@@ -113,7 +111,6 @@
       <groupId>org.jooq</groupId>
       <artifactId>jooq-meta-extensions</artifactId>
     </dependency>
-
 
     <dependency>
       <groupId>org.postgresql</groupId>
