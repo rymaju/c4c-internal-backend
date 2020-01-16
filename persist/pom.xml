@@ -77,14 +77,9 @@
 
                      - semantic: sorts versions, e.g. v-3.10.0 is after v-3.9.0 (default)
                      - alphanumeric: sorts strings, e.g. v-3.10.0 is before v-3.9.0
-                     - flyway: sorts files the same way as flyway does
-                     - none: doesn't sort directory contents after fetching them from the directory -->
-                <property>
-                  <key>sort</key>
-                  <value>flyway</value>
-                </property>
+      
 
-                <!-- The default schema for unqualified objects:
+                The default schema for unqualified objects:
 
                      - public: all unqualified objects are located in the PUBLIC (upper case) schema
                      - none: all unqualified objects are located in the default schema (default) -->
