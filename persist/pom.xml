@@ -12,9 +12,9 @@
   <properties>
     <flyway.version>6.0.3</flyway.version>
     <database.driver>org.postgresql.Driver</database.driver>
-    <database.url>jdbc:postgresql://localhost:5432/c4cneu-db?autoreconnect=true</database.url>
-    <database.username>postgres</database.username>
-    <database.password>root</database.password>
+    <database.url>jdbc:postgresql://ec2-50-16-225-96.compute-1.amazonaws.com:5432/d892h1vcvqvimo</database.url>
+    <database.username>txribxbbfmugpa</database.username>
+    <database.password>a6a7b6848b205806cb4e094064e4dd6f7cb7639d8f8974def972eda0ffbc658c</database.password>
   </properties>
 
   <build>

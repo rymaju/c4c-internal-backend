@@ -51,8 +51,9 @@ public class ServiceMain {
       e.printStackTrace();
     }
 
-    DSLContext db = DSL.using(dbProperties.getProperty("database.url"), dbProperties.getProperty("database.username"),
-        dbProperties.getProperty("database.password"));
+    DSLContext db = DSL.using(
+        "jdbc:postgresql://ec2-50-16-225-96.compute-1.amazonaws.com:5432/d892h1vcvqvimo",
+        dbProperties.getProperty("database.username"), dbProperties.getProperty("database.password"));
     this.db = db;
   }
 
